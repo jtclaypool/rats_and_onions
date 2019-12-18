@@ -12,7 +12,6 @@ def loader(path):
         df
         .transpose()
         .reset_index()
-        .assign(treatment=treatment['y'])
     )
 
-    return new_df
+    return new_df, treatment['y']
